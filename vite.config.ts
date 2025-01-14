@@ -16,4 +16,11 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   base: isGithubPages ? '/sl_one2/' : './', // GitHub Pagesの場合のみbaseを設定
+
+  build: {
+    rollupOptions: {
+      external: ['react-router-dom'], // ここにreact-router-domを追加
+    },
+  },
+
 });
